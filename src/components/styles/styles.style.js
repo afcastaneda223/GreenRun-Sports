@@ -23,6 +23,7 @@ const Cardwrap = styled.div`
     align-items: center;
     flex-direction: column;
     color: ${(props) => props.theme.color};
+    transition: background-color 0.5s linear, color 0.5s linear;    
 `;
 
 const Cardimg = styled.div`
@@ -40,9 +41,9 @@ const Themebtn = styled.button`
     border-radius: 8px;
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 10px;
     margin: 20px;
-    padding: 13px 15px;
+    padding: 10px 12px;
     width: auto;
     position: absolute
 `;
