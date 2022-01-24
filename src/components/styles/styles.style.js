@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     height: 100vh;
-    width: 100vw;
+    margin: auto;
+    width: 40vw;
     border: 2px solid red;
     border-radius: 30px;
     display: flex;
@@ -10,13 +11,22 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 1200px) {
+        width: 60vw;
+      }
+      @media screen and (max-width: 800px) {
+        width: 80vw;
+      }
+      @media screen and (max-width: 600px) {
+        width: 100vw;
+      }
 `;
 
 const Cardwrap = styled.div`
     background-color: ${(props) => props.theme.backgroundColor};
     border: 2px solid blue;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     border-radius: 30px;
     display: flex;
     flex-wrap: nowrap;
@@ -29,8 +39,8 @@ const Cardwrap = styled.div`
 const Cardimg = styled.div`
     border:2px solid green;
     border-radius: 30px;
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: 60%;
 `;
 
 const Themebtn = styled.button`
