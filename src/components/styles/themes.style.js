@@ -6,6 +6,7 @@ const lightTheme = {
     backgroundColor: '#FFFFFF',
     color: '#161617',
     borderColor: '#F0F0F0',
+    labelColor: '#8A8A8A',
   },
   button: {
     backgroundColor: '#181828',
@@ -19,6 +20,7 @@ const darkTheme = {
     backgroundColor: '#2F2F43',
     color: '#FEFEFE',
     borderColor: '#3B3B4E',
+    labelColor: '#ABABB3',
   },
   button: {
     backgroundColor: '#FFFFFF',
