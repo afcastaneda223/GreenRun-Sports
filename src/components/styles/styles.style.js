@@ -3,35 +3,30 @@ import styled from 'styled-components';
 const Container = styled.div`
     height: 100vh;
     margin: auto;
-    width: 40vw;
     border-radius: 30px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     flex-direction: column;
-    @media screen and (max-width: 1200px) {
-        width: 60vw;
-      }
-      @media screen and (max-width: 800px) {
-        width: 80vw;
-      }
-      @media screen and (max-width: 600px) {
-        width: 100vw;
-      }
+    justify-content: center;
 `;
 
 const Cardwrap = styled.div`
     background-color: ${(props) => props.theme.backgroundColor};
     border: 2px solid black;
-    height: 100%;
-    width: 100%;
+    height: 70%;
+    width: 50vw;
     border-radius: 30px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     flex-direction: column;
     color: ${(props) => props.theme.color};
-    transition: background-color 0.5s linear, color 0.5s linear;    
+    transition: background-color 0.5s linear, color 0.5s linear;
+    @media screen and (max-width: 600px) {
+      width: 100vw;
+      height: 100%;
+    }    
 `;
 
 const Cardcontent = styled.div`
