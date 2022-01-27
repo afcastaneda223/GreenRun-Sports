@@ -97,22 +97,23 @@ const FormControl = styled.input`
     }
 `;
 
-const Button = styled.button`
-border: none;
-border-radius: 20px;
-padding: 20px 40px 20px 40px;
-margin: 30px 0px 0px 40px;
-font-size: 15px;
-color: white;
-background: rgb(42,87,224);
-background: linear-gradient(0deg, rgba(42,87,224,1) 0%, rgba(33,72,198,1) 100%);
--webkit-transition: background-position .7s,box-shadow .4s;
-box-shadow: -1px -1px 30px -3px rgba(39,80,212,0.88);
-align-self: start;
+const FormButton = styled.button`
+    border: none;
+    border-radius: 20px;
+    padding: 20px 40px 20px 40px;
+    margin: 30px 0px 0px 40px;
+    font-size: 15px;
+    color: white;
+    background: rgb(42,87,224);
+    background: linear-gradient(0deg, rgba(42,87,224,1) 0%, rgba(33,72,198,1) 100%);
+    -webkit-transition: background-position .7s,box-shadow .4s;
+    box-shadow: -1px -1px 30px -3px rgba(39,80,212,0.88);
+    align-self: start;
+    cursor: pointer;
 `;
 
 export {
   Container, Cardwrap, Cardimg, Themebtn,
   Cardcontent, Form, Fromgroup, FormControl,
-  FormLabel, Button,
+  FormLabel, FormButton,
 };
