@@ -2,18 +2,40 @@ import React, { useRef, useState } from 'react';
 import {
   Cardcontent, Cardwrap, Form, Fromgroup, FormControl, FormLabel, Button,
 } from './styles/styles.style';
+import { useAuth } from '../context/AuthContext';
 
 const Signup = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const [loading] = useState(false);
+  const { signup } = useAuth();
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (passwordRef.current.value !== passwordConfirmRef.current.value0) {
+      return setError('Passwords do not match');
+    }
+
+    try {
+      setError('');
+      setLoading(true);
+      await signup(emailRef.current.value, passwordRef.current.value);
+    } catch {
+      return setError('Failed to create account');
+    }
+    setLoading(false);
+    return true;
+  }
 
   return (
     <Cardwrap>
       <Cardcontent>
         <h1>Welcome</h1>
-        <Form>
+        {error && alert('error')}
+        <Form onSubmit={handleSubmit}>
           <Fromgroup id="email">
             <FormLabel for="email">User</FormLabel>
             <FormControl type="email" ref={emailRef} required />
